@@ -1,0 +1,42 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+
+}
+
+@media only screen and (min-width: 720px) {
+  .example-form , .submit{
+    margin: 0 30%;
+  }
+}
+
+.link{
+  border : 2px solid blue; color: black
+}
