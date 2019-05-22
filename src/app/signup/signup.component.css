@@ -1,0 +1,18 @@
+.example-full-width {
+    width: 100%;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 720px) {
+    .example-form , .submit{
+      margin: 0 30%;
+    }
+  }

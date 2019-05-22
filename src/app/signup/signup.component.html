@@ -1,3 +1,78 @@
-<p>
-  signup works!
-</p>
+<form #signup="ngForm" (ngSubmit)="onSubmit(signup)" class="example-form">
+    <h2>Signup ...</h2>
+  <div class="example-full-width">
+    <mat-form-field class="example-full-width">
+      <input name="name" ngModel #name="ngModel" matInput placeholder="Name" />
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <input
+        matInput
+        name="email"
+        placeholder="Enter your email"
+        ngModel
+        #email="ngModel"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div class="example-container">
+    <mat-form-field>
+      <input
+        matInput
+        name="password"
+        placeholder="Enter your password"
+        [type]="hide ? 'password' : 'text'"
+        ngModel
+        #password="ngModel"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+      <mat-form-field>
+          <mat-label>Select an option</mat-label>
+          <mat-select name="gender" ngModel #gender="ngModel">
+            <mat-option>None</mat-option>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>You selected: {{selected}}</p>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input
+        type="number"
+        name="age"
+        ngModel
+        #age="ngModel"
+        matInput
+        placeholder="Age"
+      />
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <span matPrefix>+91 &nbsp;</span>
+      <input
+        type="tel"
+        name="phno"
+        ngModel
+        #phno="ngModel"
+        matInput
+        placeholder="Telephone"
+      />
+      <mat-icon matSuffix>mode_edit</mat-icon>
+    </mat-form-field>
+  </div>
+  <div align="center" class="example-button-row">
+    <button class="submit" mat-raised-button color="primary">
+      Signup Here!
+    </button>
+  </div>
+</form>

@@ -2,14 +2,26 @@
 <form #login="ngForm" (ngSubmit)="onSubmit(login)" class="example-form">
   <div class="example-container">
     <mat-form-field>
-      <input matInput name="email" placeholder="Enter your email" ngModel #email="ngModel" required>
-
+      <input
+        matInput
+        name="email"
+        placeholder="Enter your email"
+        ngModel
+        #email="ngModel"
+        required
+      />
     </mat-form-field>
   </div>
 
   <div class="example-container">
     <mat-form-field>
-      <input matInput name="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'" ngModel #password="ngModel"
+      <input
+        matInput
+        name="password"
+        placeholder="Enter your password"
+        [type]="hide ? 'password' : 'text'"
+        ngModel
+        #password="ngModel"
       />
       <mat-icon matSuffix (click)="hide = !hide">{{
         hide ? "visibility_off" : "visibility"
@@ -18,16 +30,20 @@
   </div>
 
   <div align="center" class="example-button-row">
-    <button class="submit" mat-raised-button color="primary">Login Here!</button>
+    <button class="submit" mat-raised-button color="primary">
+      Login Here!
+    </button>
   </div>
 </form>
 
 <h4>Current Users</h4>
 <div *ngFor="let user of userData">
-  <li>{{user.email}}</li>
+  <li>{{ user.email }}</li>
 </div>
 
 <div>
   <h4>Didn't find youself..?</h4>
-  <a routerLink="/signup"><button  mat-raised-button color="primary" >Signup Here!</button></a>
+  <a routerLink="/signup"
+    ><button mat-raised-button color="primary">Signup Here!</button></a
+  >
 </div>

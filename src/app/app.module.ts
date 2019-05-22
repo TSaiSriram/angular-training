@@ -14,6 +14,7 @@ import { HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, SignupComponent, UsersComponent],
   imports: [
@@ -26,7 +27,8 @@ import { UsersComponent } from './users/users.component';
     MatIconModule,
     MatButtonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
