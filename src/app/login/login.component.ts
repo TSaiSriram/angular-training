@@ -1,9 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  FormControl,
-  Validators,
-  NgForm
-} from "@angular/forms";
+import { FormControl, Validators, NgForm } from "@angular/forms";
 import { ServerService } from "../server.service";
 import { Router } from "@angular/router";
 
@@ -39,8 +35,10 @@ export class LoginComponent implements OnInit {
     this.userService
       .postLogin(login.value.email, login.value.password)
       .subscribe(result => {
-        const token = "Bearer " + result.token;
+        const token = result;
+        localStorage.setItem("cookie", result.cookie);
         console.log(token);
+        this.userService.getRes.next(result);
       });
     this.router.navigate(["/", "users"]);
   }

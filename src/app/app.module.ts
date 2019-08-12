@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { UsersComponent } from './users/users.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, SignupComponent, UsersComponent],
   imports: [
@@ -28,7 +29,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

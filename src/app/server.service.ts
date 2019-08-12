@@ -1,11 +1,15 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/observable";
 import { HttpClient } from "@angular/common/http";
-
+import{BehaviorSubject} from 'rxjs'
 @Injectable({
   providedIn: "root"
 })
 export class ServerService {
+
+  public getRes = new BehaviorSubject(null)
+
+  
   constructor(private http: HttpClient) {}
 
   postSignup(name : string,email : string ,password : string, gender :string, age : number, mobile : number) {

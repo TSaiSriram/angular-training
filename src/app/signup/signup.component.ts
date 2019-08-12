@@ -14,7 +14,7 @@ import { Router } from "@angular/router";
 })
 export class SignupComponent implements OnInit {
   hide = true;
-  selected;
+  selected: any;
   constructor(private router : Router, private userService : ServerService) {}
   onSubmit(signup : NgForm){
     console.log(signup.value.gender)
